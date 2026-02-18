@@ -1,11 +1,7 @@
 /* -------------------------------------------------------
    RESET / BASE
 --------------------------------------------------------*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: Arial, sans-serif;
@@ -14,24 +10,14 @@ body {
   line-height: 1.5;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
+img { max-width: 100%; display: block; }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+a { color: inherit; text-decoration: none; }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 1.5rem;
-}
+.container { max-width: 1200px; margin: auto; padding: 0 1.5rem; }
 
 /* -------------------------------------------------------
-   HEADER FIJO
+   HEADER
 --------------------------------------------------------*/
 .header {
   position: sticky;
@@ -50,49 +36,23 @@ a {
   gap: 1rem;
 }
 
-/* Logo + Marca */
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: .75rem;
-}
+.logo-area { display: flex; align-items: center; gap: .75rem; }
 
-.logo {
-  height: 55px;
-}
+.logo { height: 55px; width: auto; }
 
-.brand-text h1 {
+.brand-text .brand-name {
   font-size: 1.1rem;
   font-weight: bold;
+  line-height: 1.1;
 }
 
-.brand-text p {
-  font-size: 0.8rem;
-  opacity: .9;
-}
+.brand-text p { font-size: 0.8rem; opacity: .9; }
 
-/* NAV */
-.nav {
-  display: flex;
-  gap: 1rem;
-}
+.nav { display: flex; gap: .6rem; flex-wrap: wrap; }
+.nav a { padding: .3rem .6rem; border-radius: 8px; transition: 0.2s; }
+.nav a:hover { background: rgba(255,255,255,0.2); }
 
-.nav a {
-  padding: .3rem .6rem;
-  border-radius: 8px;
-  transition: 0.2s;
-}
-
-.nav a:hover {
-  background: rgba(255,255,255,0.2);
-}
-
-/* ACCIONES (whatsapp y redes) */
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: .7rem;
-}
+.header-actions { display: flex; align-items: center; gap: .7rem; }
 
 .btn {
   border: none;
@@ -103,32 +63,19 @@ a {
   font-size: .85rem;
 }
 
-.btn-whatsapp {
-  background: #25d366;
-  color: white;
-}
+.btn-whatsapp { background: #25d366; color: white; }
+.btn-whatsapp:hover { filter: brightness(.9); }
 
-.btn-whatsapp:hover {
-  filter: brightness(.9);
-}
-
-.social-links {
-  display: flex;
-  gap: .4rem;
-}
-
+.social-links { display: flex; gap: .4rem; }
 .social-links a {
   background: rgba(255,255,255,0.15);
   padding: .3rem .5rem;
   border-radius: 6px;
 }
-
-.social-links a:hover {
-  background: rgba(255,255,255,0.3);
-}
+.social-links a:hover { background: rgba(255,255,255,0.3); }
 
 /* -------------------------------------------------------
-   BOTÓN FLOTANTE WHATSAPP
+   WHATSAPP FLOAT
 --------------------------------------------------------*/
 .whatsapp-float {
   position: fixed;
@@ -144,12 +91,10 @@ a {
   box-shadow: 0 5px 12px rgba(0,0,0,.2);
 }
 
-.whatsapp-float:hover {
-  filter: brightness(.9);
-}
+.whatsapp-float:hover { filter: brightness(.9); }
 
 /* -------------------------------------------------------
-   ESTRUCTURA GENERAL (TESTIMONIOS A LA DERECHA)
+   LAYOUT
 --------------------------------------------------------*/
 .layout {
   display: grid;
@@ -173,20 +118,17 @@ a {
   align-items: center;
 }
 
-.hero-text h2 {
-  font-size: 2rem;
+.hero-text h1 {
+  font-size: 1.9rem;
   color: #0b3b72;
   margin-bottom: .7rem;
 }
 
-.hero-subtitle {
-  margin-bottom: .8rem;
-}
+.hero-subtitle { margin-bottom: .8rem; }
 
-.hero-badges li {
-  list-style: none;
-  margin-bottom: .3rem;
-}
+.hero-badges li { list-style: none; margin-bottom: .3rem; }
+
+.hero-cta-row { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: .8rem; }
 
 .btn-whatsapp-big {
   background: #25d366;
@@ -194,6 +136,7 @@ a {
   padding: .7rem 1.5rem;
   border-radius: 999px;
   font-weight: bold;
+  display: inline-block;
 }
 
 .btn-outline {
@@ -203,14 +146,11 @@ a {
   color: #0b3b72;
   background: white;
   font-weight: bold;
+  display: inline-block;
 }
 
-.btn-outline:hover {
-  background: #0b3b72;
-  color: white;
-}
+.btn-outline:hover { background: #0b3b72; color: white; }
 
-/* Tarjeta derecha */
 .hero-card {
   background: white;
   border-radius: 1rem;
@@ -219,22 +159,14 @@ a {
   box-shadow: 0 5px 15px rgba(0,0,0,.1);
 }
 
-.hero-card-title {
-  color: #0b3b72;
-  font-weight: bold;
-  margin-bottom: .4rem;
-}
+.hero-card-title { color: #0b3b72; font-weight: bold; margin-bottom: .4rem; }
 
 /* -------------------------------------------------------
-   SECCIONES COMUNES
+   SECTIONS
 --------------------------------------------------------*/
-.section {
-  padding: 3rem 0;
-}
+.section { padding: 3rem 0; }
 
-.section-alt {
-  background: white;
-}
+.section-alt { background: white; }
 
 .section-title {
   text-align: center;
@@ -245,18 +177,16 @@ a {
 
 .section-intro {
   text-align: center;
-  max-width: 650px;
+  max-width: 780px;
   margin: auto;
   margin-bottom: 1.8rem;
   color: #444;
 }
 
-.section-intro.small {
-  font-size: .85rem;
-}
+.section-intro.small { font-size: .85rem; }
 
 /* -------------------------------------------------------
-   TARJETAS SERVICIOS
+   CARDS
 --------------------------------------------------------*/
 .cards-grid {
   display: grid;
@@ -272,19 +202,30 @@ a {
   border: 1px solid #e0e6f0;
 }
 
-.card h3 {
-  color: #0b3b72;
-  margin-bottom: .5rem;
-}
+.card h3 { color: #0b3b72; margin-bottom: .5rem; }
 
 /* -------------------------------------------------------
-   GALERÍAS DE TRABAJOS
+   URGENCIAS BOX (Destapaciones)
 --------------------------------------------------------*/
-.work-title {
-  font-size: 1.2rem;
-  color: #0b3b72;
-  margin: 2rem 0 .8rem;
+.urgent-box {
+  margin-top: 1.6rem;
+  border-radius: 1rem;
+  border: 1px solid #cdd9f3;
+  background: #eef4ff;
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
 }
+
+.urgent-box-inner {
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.urgent-box h3 { color: #0b3b72; margin-bottom: .4rem; }
+
+/* -------------------------------------------------------
+   GALLERY (CLS FIX)
+--------------------------------------------------------*/
+.work-title { font-size: 1.2rem; color: #0b3b72; margin: 2rem 0 .8rem; }
 
 .gallery-grid {
   display: grid;
@@ -294,9 +235,12 @@ a {
 
 .gallery-grid img {
   border-radius: .8rem;
+  width: 100%;
   height: 180px;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0,0,0,.08);
+  /* CLS FIX: reserve aspect ratio */
+  aspect-ratio: 4 / 3;
 }
 
 /* -------------------------------------------------------
@@ -310,11 +254,7 @@ a {
   border: 1px solid #d7e0eb;
 }
 
-.faq-list summary {
-  font-weight: bold;
-  color: #0b3b72;
-  cursor: pointer;
-}
+.faq-list summary { font-weight: bold; color: #0b3b72; cursor: pointer; }
 
 /* -------------------------------------------------------
    ZONAS
@@ -342,6 +282,9 @@ a {
   gap: 1.5rem;
 }
 
+.contact-list { list-style: none; }
+.contact-list li { margin-bottom: .4rem; }
+
 .contact-note {
   background: #eef4ff;
   padding: 1rem;
@@ -350,13 +293,9 @@ a {
 }
 
 /* -------------------------------------------------------
-   ASIDE – TESTIMONIOS ROTATIVOS
+   TESTIMONIOS (CLS FIX)
 --------------------------------------------------------*/
-.testimonials-aside {
-  position: sticky;
-  top: 100px;
-  height: fit-content;
-}
+.testimonials-aside { position: sticky; top: 100px; height: fit-content; }
 
 .testimonials-card {
   background: #ffffff;
@@ -367,20 +306,18 @@ a {
   text-align: center;
 }
 
-.testimonial-stars {
-  color: #ffd700;
-  font-size: 1.2rem;
-}
+.testimonial-stars { color: #ffd700; font-size: 1.2rem; }
 
-.testimonial-text {
-  margin: .7rem 0;
-  font-style: italic;
-}
-
+.testimonial-text,
 .testimonial-author {
-  font-size: .9rem;
-  color: #333;
+  margin: .7rem 0;
+  display: block;
+  min-height: 56px; /* reserva espacio = menos CLS */
+  transition: opacity .2s ease;
 }
+
+.testimonial-text { font-style: italic; }
+.testimonial-author { font-size: .9rem; color: #333; }
 
 /* -------------------------------------------------------
    FOOTER
@@ -393,93 +330,20 @@ a {
   margin-top: 3rem;
 }
 
-.footer-copy {
-  font-size: .85rem;
-  opacity: .9;
-}
+.footer-copy { font-size: .85rem; opacity: .9; }
 
 /* -------------------------------------------------------
    RESPONSIVE
 --------------------------------------------------------*/
 @media (max-width: 950px) {
-  .layout {
-    grid-template-columns: 1fr;
-  }
-
-  .testimonials-aside {
-    display: none;
-  }
-
-  .hero-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .cards-grid,
-  .gallery-grid,
-  .zones-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-
-  .contact-block {
-    grid-template-columns: 1fr;
-  }
+  .layout { grid-template-columns: 1fr; }
+  .testimonials-aside { display: none; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .cards-grid, .gallery-grid, .zones-grid { grid-template-columns: repeat(2,1fr); }
+  .contact-block { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 650px) {
-  .cards-grid,
-  .gallery-grid,
-  .zones-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    padding-top: 3rem;
-  }
-}
-/* --- GALERÍA DE TRABAJOS --- */
-
-.trabajos-section {
-    margin-top: 60px;
-    text-align: center;
-    padding: 20px;
-}
-
-.trabajos-section h2 {
-    font-size: 2rem;
-    margin-bottom: 25px;
-    color: #0a2a63;
-}
-
-.galeria-trabajos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.galeria-trabajos img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
-    transition: transform .25s ease;
-}
-
-.galeria-trabajos img:hover {
-    transform: scale(1.03);
-}
-
-/* Versión móvil */
-@media (max-width: 768px) {
-    .galeria-trabajos {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .galeria-trabajos {
-        grid-template-columns: 1fr;
-    }
+  .cards-grid, .gallery-grid, .zones-grid { grid-template-columns: 1fr; }
+  .hero { padding-top: 3rem; }
 }
