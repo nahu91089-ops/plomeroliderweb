@@ -1,15 +1,14 @@
 /* --------------------------------------------
-   TESTIMONIOS ROTATIVOS (con guardas)
+   TESTIMONIOS ROTATIVOS (Reseñas Google reales)
 --------------------------------------------- */
 
 document.addEventListener("DOMContentLoaded", () => {
   const testimonialsData = [
-    { text: "Cambió una mochila de inodoro y quedó funcionando perfecto. Rápido y prolijo.", author: "Patricia (Saavedra)" },
-    { text: "Tenía olor a gas, vino un domingo y lo resolvió en poco tiempo.", author: "Martín (Núñez)" },
-    { text: "Instaló el termotanque nuevo, dejó todo limpio y funcionando.", author: "Lorena (Belgrano)" },
-    { text: "Muy buena atención, me explicó todo por WhatsApp antes de venir.", author: "Valeria (Coghlan)" },
-    { text: "Trabajo impecable, solucionó la presión baja en la ducha.", author: "Ana (Villa Urquiza)" },
-    { text: "Revisó una pérdida de gas y la arregló. Muy profesional.", author: "Gustavo (Vicente López)" }
+    { text: "Un genio total, me solucionó todo lo que Aysa no quiso hacer...rápido, honesto, prolijo, recpmendable 100%", author: "Marcela de Laurentiis ⭐⭐⭐⭐⭐" },
+    { text: "Vinieron a arreglar un calefón. Pidieron fotos para estimar costos, pasaron presupuesto. Trabajo muy bien y prolijo. Quedamos super conformes!", author: "Agustina Scarafia ⭐⭐⭐⭐⭐" },
+    { text: "Muy buena atención, puntual, realizaron un excelente trabajo.", author: "Patricia Ruiz ⭐⭐⭐⭐⭐" },
+    { text: "Hizo cambio de termotanque eléctrico, excelente trabajo, muy prolijo. Buenas recomendaciones, ya se lo recomendé a una amiga!", author: "Sussy Rossi ⭐⭐⭐⭐⭐" },
+    { text: "Desde el primer contacto demostró profesionalismo y puntualidad. Evaluó el problema con rapidez y ofreció soluciones claras. Trabajo impecable, dejó todo limpio. Es un plomero de confianza, honesto y muy recomendable.", author: "Rosario Castells ⭐⭐⭐⭐⭐" }
   ];
 
   const textEl = document.getElementById("testimonial-text");
@@ -26,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     authorEl.style.opacity = 0;
 
     setTimeout(() => {
-      textEl.textContent = `“${t.text}”`;
+      textEl.textContent = `"${t.text}"`;
       authorEl.textContent = `— ${t.author}`;
       textEl.style.opacity = 1;
       authorEl.style.opacity = 1;
@@ -36,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   showTestimonial();
-  setInterval(showTestimonial, 5000);
+  setInterval(showTestimonial, 6000);
 
   /* Año automático */
   const yearEl = document.getElementById("year");

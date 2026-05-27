@@ -1,0 +1,438 @@
+/* -------------------------------------------------------
+   RESET / BASE
+--------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  color: #222;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+/* -------------------------------------------------------
+   HEADER FIJO
+--------------------------------------------------------*/
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #0b3b72;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .7rem 0;
+  gap: 1rem;
+}
+
+/* Logo + Marca */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.logo {
+  height: 55px;
+}
+
+.brand-text h1 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.brand-text p {
+  font-size: 0.8rem;
+  opacity: .9;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  padding: .3rem .6rem;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ACCIONES (whatsapp y redes) */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+
+.btn {
+  border: none;
+  padding: .4rem 1rem;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: .85rem;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.btn-whatsapp:hover {
+  filter: brightness(.9);
+}
+
+.social-links {
+  display: flex;
+  gap: .4rem;
+}
+
+.social-links a {
+  background: rgba(255,255,255,0.15);
+  padding: .3rem .5rem;
+  border-radius: 6px;
+}
+
+.social-links a:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+/* -------------------------------------------------------
+   BOTÓN FLOTANTE WHATSAPP
+--------------------------------------------------------*/
+.whatsapp-float {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background: #25d366;
+  color: white;
+  padding: .8rem 1.3rem;
+  border-radius: 999px;
+  font-size: .95rem;
+  font-weight: bold;
+  z-index: 999;
+  box-shadow: 0 5px 12px rgba(0,0,0,.2);
+}
+
+.whatsapp-float:hover {
+  filter: brightness(.9);
+}
+
+/* -------------------------------------------------------
+   ESTRUCTURA GENERAL (TESTIMONIOS A LA DERECHA)
+--------------------------------------------------------*/
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* -------------------------------------------------------
+   HERO
+--------------------------------------------------------*/
+.hero {
+  background: linear-gradient(135deg, white 0%, #eef4fb 50%, white 100%);
+  padding: 4rem 0 2rem;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  color: #0b3b72;
+  margin-bottom: .7rem;
+}
+
+.hero-subtitle {
+  margin-bottom: .8rem;
+}
+
+.hero-badges li {
+  list-style: none;
+  margin-bottom: .3rem;
+}
+
+.btn-whatsapp-big {
+  background: #25d366;
+  color: white;
+  padding: .7rem 1.5rem;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.btn-outline {
+  padding: .6rem 1.2rem;
+  border: 2px solid #0b3b72;
+  border-radius: 999px;
+  color: #0b3b72;
+  background: white;
+  font-weight: bold;
+}
+
+.btn-outline:hover {
+  background: #0b3b72;
+  color: white;
+}
+
+/* Tarjeta derecha */
+.hero-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid #d9e3ee;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.hero-card-title {
+  color: #0b3b72;
+  font-weight: bold;
+  margin-bottom: .4rem;
+}
+
+/* -------------------------------------------------------
+   SECCIONES COMUNES
+--------------------------------------------------------*/
+.section {
+  padding: 3rem 0;
+}
+
+.section-alt {
+  background: white;
+}
+
+.section-title {
+  text-align: center;
+  color: #0b3b72;
+  font-size: 1.6rem;
+  margin-bottom: .6rem;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 650px;
+  margin: auto;
+  margin-bottom: 1.8rem;
+  color: #444;
+}
+
+.section-intro.small {
+  font-size: .85rem;
+}
+
+/* -------------------------------------------------------
+   TARJETAS SERVICIOS
+--------------------------------------------------------*/
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.2rem;
+}
+
+.card {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+  border: 1px solid #e0e6f0;
+}
+
+.card h3 {
+  color: #0b3b72;
+  margin-bottom: .5rem;
+}
+
+/* -------------------------------------------------------
+   GALERÍAS DE TRABAJOS
+--------------------------------------------------------*/
+.work-title {
+  font-size: 1.2rem;
+  color: #0b3b72;
+  margin: 2rem 0 .8rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: .8rem;
+}
+
+.gallery-grid img {
+  border-radius: .8rem;
+  height: 180px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,.08);
+}
+
+/* -------------------------------------------------------
+   FAQ
+--------------------------------------------------------*/
+.faq-list details {
+  background: white;
+  padding: 1rem;
+  border-radius: .6rem;
+  margin-bottom: .8rem;
+  border: 1px solid #d7e0eb;
+}
+
+.faq-list summary {
+  font-weight: bold;
+  color: #0b3b72;
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------
+   ZONAS
+--------------------------------------------------------*/
+.zones-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.2rem;
+}
+
+.zone {
+  background: white;
+  padding: 1rem;
+  border-radius: .8rem;
+  border: 1px solid #d7e0eb;
+  box-shadow: 0 3px 8px rgba(0,0,0,.05);
+}
+
+/* -------------------------------------------------------
+   CONTACTO
+--------------------------------------------------------*/
+.contact-block {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 1.5rem;
+}
+
+.contact-note {
+  background: #eef4ff;
+  padding: 1rem;
+  border-radius: .8rem;
+  border: 1px solid #cdd9f3;
+}
+
+/* -------------------------------------------------------
+   ASIDE – TESTIMONIOS ROTATIVOS
+--------------------------------------------------------*/
+.testimonials-aside {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.testimonials-card {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #d7e0eb;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+  text-align: center;
+}
+
+.testimonial-stars {
+  color: #ffd700;
+  font-size: 1.2rem;
+}
+
+.testimonial-text {
+  margin: .7rem 0;
+  font-style: italic;
+}
+
+.testimonial-author {
+  font-size: .9rem;
+  color: #333;
+}
+
+/* -------------------------------------------------------
+   FOOTER
+--------------------------------------------------------*/
+.footer {
+  background: #0b3b72;
+  color: white;
+  padding: 1.4rem 0;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.footer-copy {
+  font-size: .85rem;
+  opacity: .9;
+}
+
+/* -------------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------------*/
+@media (max-width: 950px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-aside {
+    display: none;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-grid,
+  .gallery-grid,
+  .zones-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .contact-block {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .cards-grid,
+  .gallery-grid,
+  .zones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 3rem;
+  }
+}
